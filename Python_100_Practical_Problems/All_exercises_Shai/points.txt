@@ -1,0 +1,69 @@
+exercise,points
+1,1
+2,1
+3,1
+4,1
+5,1
+6,1
+7,1
+8,1
+9,1
+10,2
+11,0
+12,1
+13,0
+14,0
+15,0
+16,0
+17,1
+18,1
+19,0
+20,0
+21,0
+22,0 -- 11th dec 2025 start
+23,1
+24,1
+25,0
+26,1 -- but i could find other better options as well
+27,1
+28,2
+29,1
+30,1 - start 20251212
+31,1
+32,0
+33,1
+34,0
+35,0
+36,0 - end 20251212 - session 1
+37,0  -- start 20251213  -- useful learning
+38,1
+39,0 -- attribute error - useful learning
+40,1
+41,0
+42,0
+43,0 -- zip usage is fun -- end 20251213 - session 1
+44,0 -- start 20251213 -- session 2.
+45,1 -- can create folder to make it cleaner
+46,1  -- start 20251220
+47,1
+48,1
+49,0  --  was not confident about the reasoning
+50,1
+51,1
+52,2 -- end 20251220
+53,1 -- start 20251220 - session 2
+54,2
+55,0 - i was there.., just a silly mistake
+56,0 -- end session 2
+57,0 -- start 20251221 - session 1 . Knowledge based
+58,0 -- did partial. but good challenge. have to copy entire file, make changes then push entire dictionary in the file. o inplace solution dicussed .
+59,0 - new concept of enumerate
+60,0 - new concept of time.sleep
+61,1
+62,2
+63,3 -- I used while condition. not used if then break -- end session 1
+64,0 -- 20251222  start session 1
+65,0 -- basic different between break, continue and pass
+66,1
+67,0
+68,0 -- got answer by googling. rather that dir(str) would have given me the result -- end session 1

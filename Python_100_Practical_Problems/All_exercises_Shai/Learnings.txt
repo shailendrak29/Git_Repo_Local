@@ -1,0 +1,314 @@
+4.py
+# datatype conversion
+# str(1) : converts the number to string
+# int("1") : converts the string to number
+
+5-10.py
+
+11.py
+Basic for syntax :
+for i in range(1,21) :
+    print(i)
+
+print (i for i in range(1,21))  # this doesnot generate any values. just returns the object details
+
+#Range :
+print (range(1,21))  # this gives object range. need list word to convert to list output
+print (list(range(1,21)))  # this works
+print (*range(1,21))
+# The * unpacks the range into separate arguments.
+# So this:                 print(*range(1, 21))
+# becomes internally like: print(1, 2, 3, 4, ..., 20)
+
+#12
+print ([x*10 for x in my_range])  #use list comprehension., square bracket is important
+
+#13
+#map function
+# map iterated a function to all objects iterable function (here range)
+my_range = range(1, 21)
+print (list(map(str,my_range)))
+
+#14  : removes duplicate items from the list a .
+print (list(set(a)) ) # useful but changes the order of items
+print(list(OrderedDict.fromkeys(a))) # maintains order
+# long , with basic append
+for i in a :
+    if i not in b :
+        b.append(i)
+
+#15 : Creating dictionary
+d = {a:1,b:2}
+d1 = dict(a=1,b=2)
+
+#16 : Access Dicionary items
+d = {"a": 1, "b": 2}
+print (d["b"])
+# accessing dictionary values follows the same syntax as accessing list items.
+# The difference is that lists have indexes, while dictionaries have keys that you create by yourself.
+
+#17 : Nothing new
+
+#18
+#A KeyError always means Python could not find a key with the name shown next to KeyError (e.g. Smith ).
+
+#19
+d["c"] = 3
+print (d)
+# Adding pairs of keys and values is straightforward, as you can see.
+
+# 20
+#Question: Calculate the sum of all dictionary values.
+d = {"a": 1, "b": 2, "c": 3}
+print (sum(d.values()))
+# d.values()  returns a list-like dict_values object while the sum function calculates the sum of the dict_values  items.
+
+#21 Dictionary filteration
+# Use dictionary comprehension
+d = {"a": 1, "b": 2, "c": 3}
+filter = {}
+filter = {x:y for x,y in d.items() if y<=1}
+d = dict((key, value) for key, value in d.items() if value <= 1)
+
+# 25 Strings
+import string
+print (string.ascii_lowercase)
+# returns :
+# abcdefghijklmnopqrstuvwxyz
+
+# 26 Print range values
+print("using basic for loop")
+for number in range(1,11) :
+    print (number)
+
+print ("using comprehension \n")
+[print(i) for i in range (1,11)]
+
+print ("directly using range, * for unpack and \n separator")
+print (*range(1,11),sep="\n")
+
+28 Return
+# return a + b		Simple, clean
+# return (a + b)		Redundant parentheses
+
+29 definition argument sequence
+def sphere_vol(h,r=10) # works
+def sphere_vol(r=10,h) #SyntaxError: non-default argument follows default argument
+Always put non-default parameters first, followed by default ones.
+Thus, passing default value becomes optional.
+
+32 Global variable
+c = 1
+def foo():
+    return c
+c = 3
+print(foo())  # prints 3
+#My answer : c is not defined in the function, so it should not print anything
+#Actual answer : c value is global and function returns the latest value of c
+
+34 Making Local variable , global
+def foo():
+    global c
+    c = 1
+    return c
+foo()
+print(c)
+
+# my answer was c = foo()
+# actual answer/ smarter answer to make c global within the function
+# Adding global c  fixes the code. That line makes available name c  in the global namespace. Therefore,  print can access the variable c.
+
+
+35 Calculate number of words in an sentence
+We're using split  here which is a string method that splits a string into several strings given a separator passed inside the brackets.
+When you don't pass a separator, split  will split a string at white spaces.
+This will output a list of strings..
+Applying len  to that list returns the number of list items, so the number of words.
+
+a = "I am amazing"
+print (len(a.split(" ")))
+print (len(a.split()))
+
+36 Reading file
+        with open (file_path,'r', encoding='utf-8') as f:
+            content = f.read()
+
+if only file name is passed as file_path, then file and script should be in same location
+
+37 SENTENCE TO WORDS
+    import re # regular expression
+    print ("basic : ")
+    print(content.split())
+    print ("1st : ")
+    print (re.split(",| ", content) ) # regular expression split comma or space
+    print ("2nd : ")
+    print (re.split(r"[ ,]", content))
+    print ("3rd : ")
+    print (re.split(r"[,\s]", content)) # Use \s (any whitespace: space, tab, newline):
+    print ("4th : ")
+    print (re.split(r"[,\s]+", content)) # + for one or more, but still same result
+    print ("5th : ")
+    print (re.findall(r"\b\w+\b", content)) # cleanest \b is word boundary at start and end of \w+ which is word consisting of
+    letters: a–z, A–Z
+    digits: 0–9
+    underscore _
+    + means: one or more
+
+    RESULTS
+content : A tree is a woody perennial plant,typically with branches.
+
+basic :
+['A', 'tree', 'is', 'a', 'woody', 'perennial', 'plant,typically', 'with', 'branches.']
+1st :
+['A', 'tree', 'is', 'a', 'woody', 'perennial', 'plant', 'typically', 'with', 'branches.\n']
+2nd :
+['A', 'tree', 'is', 'a', 'woody', 'perennial', 'plant', 'typically', 'with', 'branches.\n']
+3rd :
+['A', 'tree', 'is', 'a', 'woody', 'perennial', 'plant', 'typically', 'with', 'branches.', '']
+4th :
+['A', 'tree', 'is', 'a', 'woody', 'perennial', 'plant', 'typically', 'with', 'branches.', '']
+5th :
+['A', 'tree', 'is', 'a', 'woody', 'perennial', 'plant', 'typically', 'with', 'branches']
+
+39 : AttributeError: module 'math' has no attribute 'cosine'
+to check attributes within a module use : dir(module_name)
+to need help on the attribute : help(module_name.attribute)
+
+in terminal :
+(py_100_env) PS D:\Shailendra Kelkar\Projects\My_Git_Repo\Python_100_Practical_Problems\All_exercises_Shai> python
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import math
+>>> dir (math)
+['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'comb', 'copysign', 'cos', 'cosh', 'degrees', 'dist', 'e', 'erf', 'erfc', 'exp', 'expm1', 'f
+abs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'isqrt', 'lcm', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'nextafter', 'pe
+rm', 'pi', 'pow', 'prod', 'radians', 'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc', 'ulp']
+>>> help(math.cos)
+Help on built-in function cos in module math:
+
+cos(x, /)
+>>> exit()
+
+41 . Writing in a file, also writing on next line \n
+f.write(letter + "\n")
+
+42. use of zip for different data types
+
+a = [1, 2, 3]
+b = (4, 5, 6)
+c = {"a":7,"b":8,"c":9}
+
+for i,j,k in zip(a,b,c.values(), strict = False):
+    print (i+j+k)
+
+#strict is False , just assures that even if there are more than 3 elements in any of the datatype, still the zip will work with common indexes
+
+44 Got most missed last 2 alphabets setting. so importnace of blank space at end of 26 alphabets to make it 27
+
+46
+List files in a folder
+read the content and append content in a list
+
+for file in os.listdir(folder) :
+    print (file)
+    with open (folder+'/'+file, 'r') as f :
+        content.append(f.read())
+
+glob.glob is also an option
+
+47
+f.read spits out everything in first call. next call gives blank
+print (f.read())
+print (f.read())
+
+checking alphabet is part of string or not
+if value in 'python' :
+
+
+49.
+a reserved key cannot be used as a variable
+eg :  pass
+
+50
+input always returns a string. so for numbers convert it into number
+age = input("What's your age? ")
+age_last_year = int(age) - 1
+
+52 Tuple is needed for multiple variable.
+print("Your first name is %s and your second name is %s" % (firstname, secondname))
+Still if prefer f'ddsds{variable}sdsd'
+
+53 Dictionary can be accessed by single and double quote
+print (d["employees"][1]["lastName"])
+print (d['employees'][1]['lastName'])
+
+56 Moving a dictionary into a JSON file format
+import json
+d = {"employees":[{"firstName": "John", "lastName": "Doe"}, {"firstName": "Anna", "lastName": "Smith"},{"firstName": "Peter", "lastName": "Jones"}],
+"owners":[{"firstName": "Jack", "lastName": "Petter"},{"firstName": "Jessy", "lastName": "Petter"}]}
+
+with open ("emp.json", "w") as f :
+    json.dump(d,f,indent = 4)
+
+# damn easy
+
+57
+Moving json file to dictionary : json.loads
+to print the dictionary in readable format : pprint (d)
+
+import json, pprint
+
+with open ("emp.json","r") as f:
+#     print (f.read())
+    d = json.loads(f.read())
+pprint.pprint (d)
+print (d)
+
+58
+how to open file in read write mode : r+
+importance of f.seek(0) : This command takes the cursor in the file to the top. thus, helping in writing the data from the top.
+                          Else, the f.dump will paste the values at the end of the file.
+what is f.truncate() : I could not see the difference. But in explanation. It removes the existing data from the file. (it does)
+                     It removes all the data after the current cursor location.
+
+59
+enumerate : useful for list to create index, value tuple. useful to grab the index position with value
+            By default start index number is 0, but can be changed
+for i, name in enumerate(names, start=1):
+    print(i, name)
+
+60
+while loop
+
+61
+import time
+use time.sleep to create time intervals
+
+64.
+pass is used to take no actions. execute the next statement inside while loop
+
+65
+continue is used to take no action, but abort current loop and start the new loop of while statement
+
+67
+try-except is better way of handling errors rather than if else
+for multiple me errors as below will work : (keep Exception at the end for remaining errors
+in if (number of conditions will be more. try will work much better
+
+try:
+    x = int(input("Enter a number: "))
+    y = 10 / x
+    print(y)
+
+except ValueError:
+    print("Invalid input. Please enter a number.")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+except Exception as e:
+    print("Unexpected error:", e)
+
+
+68
+lower() is the function of str data type. so visible in dir(str). usage word.lower() or input().lower()

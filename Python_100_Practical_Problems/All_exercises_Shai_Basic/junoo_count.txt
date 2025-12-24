@@ -1,0 +1,79 @@
+
+Total number of words : 143
+Unique words : 72
+
+ Words : Counts
+
+ Sorted Words : Counts
+junoon : 12
+oh : 6
+yeh : 5
+mera : 5
+bin : 5
+na : 5
+tere : 5
+kahin : 4
+- : 4
+meri : 4
+Junoon : 4
+tamanna : 4
+Aye : 3
+Kya : 3
+sukoon : 3
+Aaye : 3
+hai : 3
+mujhe : 3
+din : 2
+3x : 2
+saathi : 2
+yaadon : 2
+hai? : 2
+Oh : 2
+yeh, : 2
+mein : 2
+Jaan-e-jaan : 1
+karun : 1
+teri : 1
+zindagi : 1
+Hai : 1
+story : 1
+humnashin : 1
+Main : 1
+se : 1
+mere : 1
+jahan : 1
+mumkin : 1
+wahi : 1
+gumshuda : 1
+9x : 1
+dil : 1
+love : 1
+dilbar, : 1
+ab : 1
+aaya : 1
+pyaar : 1
+Jeena : 1
+kogayaaaaaaaa : 1
+kaha. : 1
+Aaj : 1
+be : 1
+vo : 1
+raat : 1
+kahani : 1
+jude : 1
+Teri : 1
+6x : 1
+mein, : 1
+esa : 1
+nei : 1
+Tere : 1
+naa : 1
+my : 1
+kya : 1
+kahe : 1
+mujhey : 1
+Mera : 1
+khayalon : 1
+main : 1
+lord, : 1
+tum : 1
