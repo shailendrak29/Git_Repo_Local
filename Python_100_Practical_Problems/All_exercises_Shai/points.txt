@@ -67,3 +67,9 @@ exercise,points
 66,1
 67,0
 68,0 -- got answer by googling. rather that dir(str) would have given me the result -- end session 1
+69,0 - 20251227 - session 1 - did not understand the solution. tried getting the solution but not clean
+70,0 -- new concept of requests - useful
+71,0
+72,0 -- session 1 end
+
+

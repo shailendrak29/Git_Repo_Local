@@ -312,3 +312,35 @@ except Exception as e:
 
 68
 lower() is the function of str data type. so visible in dir(str). usage word.lower() or input().lower()
+
+70
+import requests # this is useful for accessing the HTTP websites
+
+71
+response is an object
+text is an attribute of response. of type string
+count() is a string function
+
+
+requests
+ └── get()                     → function
+      └── Response object
+           ├── .status_code    → int
+           ├── .headers        → dict
+           ├── .text           → str
+           │     ├── .count()  → method of str
+           │     ├── .split()
+           │     ├── .replace()
+           │     └── ...
+           └── .json()         → method of Response
+
+| Expression              | Type      | Meaning              |
+| ----------------------- | --------- | -------------------- |
+| `response`              | object    | Instance of Response |
+| `response.text`         | attribute | String data          |
+| `response.json()`       | method    | Function call        |
+| `response.text.count()` | method    | String method        |
+
+72
+import webbrowser # this is a standard library
+while opening the URL a parameter can be passed as string. This helps in searching on google as well
