@@ -344,3 +344,30 @@ requests
 72
 import webbrowser # this is a standard library
 while opening the URL a parameter can be passed as string. This helps in searching on google as well
+
+
+73
+use of pandas to pull csv data from website and muliply the numbers from alpha numeric data
+
+3️⃣ How pandas decides what to multiply
+Pandas applies operations column-wise, based on data type (dtype).
+Numeric columns : int, float → multiply element-wise
+Non-numeric columns (strings) : object / string → ignored (left unchanged)
+
+4️⃣ Why strings are NOT duplicated (important!)
+In plain Python: "abc" * 2
+Output: 'abcabc'
+
+❗ So why doesn’t pandas do this?
+Because pandas follows data science semantics, not Python string semantics.
+Pandas assumes: “Multiplying a dataset means numeric transformation, not text duplication.”
+So pandas skips non-numeric columns.
+
+74
+concat is union_all, it doesnot remove the duplicates
+adding drop_duplicates() method makes it union
+
+data_3 = pd.concat([data_1,data_2]).drop_duplicates()
+print (data_3)
+data_3.to_csv("sample_data_3.csv", index=None)  # with index = None, only the data is populated and the index is dropped
+
