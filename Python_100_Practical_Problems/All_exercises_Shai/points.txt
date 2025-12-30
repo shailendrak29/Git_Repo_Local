@@ -73,5 +73,10 @@ exercise,points
 72,0 -- session 1 end
 73,0  -- 20251228 session 1
 74,0 -- END SESSION 1
+75,0  -- 20251228 -session 2
+76,0  -- session 2 end
+77,2   -- 20251229 session 1  -- has a better in built function, that can be used as well  -- session 1 end
+78,0  -- 20251230, session 1
+79,0  -- did reach partial. regex is also a good option. solution had the any option
 
 

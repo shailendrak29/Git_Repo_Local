@@ -371,3 +371,93 @@ data_3 = pd.concat([data_1,data_2]).drop_duplicates()
 print (data_3)
 data_3.to_csv("sample_data_3.csv", index=None)  # with index = None, only the data is populated and the index is dropped
 
+75.
+plt.show()
+It simply means:
+“Display the current figure(s) that exist in memory.”
+so multiple graphs can be showed using one same show command
+
+
+76
+import datetime
+print (datetime.datetime.now().strftime("Today is %A, %B %d, %Y"))
+Today is Sunday, December 28, 2025
+
+Here is a clean, complete, and practical list of strftime placeholders, grouped so they’re easy to remember and use.
+
+📅 Date-related placeholders
+Code	Meaning	Example
+%Y	    Year (4-digit)	2025
+%y	    Year (2-digit)	25
+%m	    Month (01–12)	12
+%B	    Month name (full)	December
+%b	    Month name (short)	Dec
+%d	    Day of month (01–31)	27
+%A	    Weekday name (full)	Saturday
+%a	    Weekday name (short)	Sat
+%j	    Day of year (001–366)	361
+%w	    Weekday number (0=Sunday)	6
+%u	    ISO weekday (1=Monday)	6
+
+⏰ Time-related placeholders
+Code	Meaning	Example
+%H	    Hour (24-hour)	14
+%I	    Hour (12-hour)	02
+%p	    AM / PM	PM
+%M	    Minute	09
+%S	    Second	45
+%f	    Microseconds	123456
+
+🕒 Combined date & time
+Code	Meaning	Example
+%c	    Locale date & time	Sat Dec 27 14:09:45 2025
+%x	    Locale date	12/27/25
+%X	    Locale time	14:09:45
+
+📆 Week / ISO calendar
+Code	Meaning	Example
+%U	    Week number (Sunday first)	52
+%W	    Week number (Monday first)	52
+%V	    ISO week number	52
+%G	    ISO year	2025
+%g	    ISO year (2-digit)	25
+
+🌍 Timezone-related
+Code	Meaning	Example
+%Z	    Timezone name	EST
+%z	    UTC offset	-0500
+
+⚠️ Requires timezone-aware datetime.
+
+🧩 Special characters
+Code	Meaning
+%%	    Literal %
+
+77.
+Ways of getting current year
+current_year = int (dt.datetime.now().strftime("%Y"))  # this needs data conversion
+current_year = dt.datetime.now().year
+
+now() has multiple attributes like year. this can be used directly
+
+
+78.
+3️⃣ What does join() do?
+"separator".join(iterable)
+It:
+Takes an iterable of strings
+Joins them into one single string
+Inserts the separator between elements
+
+4️⃣ Applying it to your code
+"".join(chosen)
+Separator = "" (nothing)
+So characters are joined without spaces
+Result:
+"A b 3 ! x"   ❌
+"Ab3!x"       ✅
+
+79.
+two ways of checking validation of password
+if (len(password) > 4 and any( i.isdigit() for i in password ) and any( i.isupper() for i in password) ) :
+if ( (len(password) > 4 ) and re.search('[0-9]', password) and re.search('[A-Z]', password)) :
