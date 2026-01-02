@@ -14,6 +14,7 @@ print (valid_chars)
 # print ("|".join(r.sample(valid_chars, 6)))
 
 chosen_chars = r.sample(valid_chars,6)
+print (chosen_chars)
 password = "".join(chosen_chars)
 print (password)
 # created_passwords.append(password)

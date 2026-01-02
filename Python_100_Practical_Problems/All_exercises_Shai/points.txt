@@ -78,5 +78,5 @@ exercise,points
 77,2   -- 20251229 session 1  -- has a better in built function, that can be used as well  -- session 1 end
 78,0  -- 20251230, session 1
 79,0  -- did reach partial. regex is also a good option. solution had the any option
-
-
+80,4  -- 20251231 - advanced password checker - did it right with Strings. List was a better option
+81,4   -- 20260102 - session 1. With help opf google. Right approach

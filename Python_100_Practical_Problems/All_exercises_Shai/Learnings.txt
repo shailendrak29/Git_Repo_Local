@@ -461,3 +461,31 @@ Result:
 two ways of checking validation of password
 if (len(password) > 4 and any( i.isdigit() for i in password ) and any( i.isupper() for i in password) ) :
 if ( (len(password) > 4 ) and re.search('[0-9]', password) and re.search('[A-Z]', password)) :
+
+
+
+81.
+Q. reading file, with each line in the list
+user readlines() , as compared to read()
+read : will have all text in one item of list
+read line will create one line as one item. Along with '\n'
+to get rid of '\n' use strip('\n') in list comprehension
+
+Sample :
+    with open ("users.txt","r") as f :
+        raw_users_list = f.readlines()
+
+    users_list = [item.strip('\n') for item in raw_users_list]
+
+
+Q. Writing the credentials dictionary in file. (not sure if this is best way)
+We cannot directly write a dictionary in the file.
+So conver the dict into string. along with \n
+
+Sample :
+credentials = {"username" : username,"password" : password}
+print (credentials)
+print (str(credentials))
+
+with open ("credentials.txt","a") as f :
+     f.write(str(credentials)+'\n')
