@@ -80,3 +80,7 @@ exercise,points
 79,0  -- did reach partial. regex is also a good option. solution had the any option
 80,4  -- 20251231 - advanced password checker - did it right with Strings. List was a better option
 81,4   -- 20260102 - session 1. With help opf google. Right approach
+82,0 -- 20260103 - Session 1 . new library needed
+83,0 -- new library
+84,3 --  I was able to research and find the code by myself. got some more notes in learning
+85,1 -- used hint and could solve -- end session 1

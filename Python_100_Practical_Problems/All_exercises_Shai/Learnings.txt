@@ -489,3 +489,61 @@ print (str(credentials))
 
 with open ("credentials.txt","a") as f :
      f.write(str(credentials)+'\n')
+
+
+82.
+Which library is used for Astronomical Computations
+the ephem  library, which is used for astronomy computations
+Compute on the object is needed to calculate all values
+Samples : Jupiter distance from Sun on specific date
+
+import ephem as ep
+jupiter = ep.Jupiter()
+print (jupiter)
+# jupiter.compute()  # default is current date
+date_to_compute = '1230/01/01'
+jupiter.compute(date_to_compute)   # compute populates values in all distances
+print (jupiter.earth_distance)
+print (jupiter.sun_distance * 149597870.691)  # Conversaion of Astronomical Units (AU) to Kilometers
+
+83
+TO get monitor dimension details
+new library screeninfo was imported
+Sample :
+from screeninfo import get_monitors
+width=get_monitors()[0].width
+height=get_monitors()[0].height
+print("Width: %s,  Height: %s" % (width, height))
+
+84.
+# This code results in flikery window. as the app.run keeps running.
+# Having the window event on_draw makes the output stable
+
+84_1
+This works stable
+4️⃣ Why label.draw() Alone Is Not Enough
+Think of label.draw() as:
+“Paint this right now, once”
+But graphics programs need:
+“Paint this every time the window refreshes”
+That’s what on_draw() provides.
+
+
+85
+Cleaning data from file and creating a new file
+
+countries_raw =[]
+
+with open ("countries_raw.txt", "r") as f :
+#     countries_raw1.append(f.readlines())
+    countries_raw = f.readlines()
+
+# countries_cleaned = [item.strip('\n') for item in countries_raw if (len(item)> 1) and item != '\n' ]
+countries_cleaned = [item for item in countries_raw if (len(item.strip('\n'))> 1) and item != '\n' and item.strip('\n') != 'Top of Page' ]
+
+print (countries_cleaned)
+print (len(countries_cleaned))
+
+with open ("countries_clean.txt", "w") as f :
+    for item in countries_cleaned :
+        f.write(item)   # kept the \n in each item, so did not need to concatenate the \n while writing
