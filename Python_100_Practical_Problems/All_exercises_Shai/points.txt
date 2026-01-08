@@ -84,3 +84,7 @@ exercise,points
 83,0 -- new library
 84,3 --  I was able to research and find the code by myself. got some more notes in learning
 85,1 -- used hint and could solve -- end session 1
+86,4  -- 20260107 - session 1 -- checked few learnings and was able to solve
+87,0 -- i had completed as using append. it gave result. I liked the list+list option so marking myself as zero -- end session 1
+
+

@@ -547,3 +547,29 @@ print (len(countries_cleaned))
 with open ("countries_clean.txt", "w") as f :
     for item in countries_cleaned :
         f.write(item)   # kept the \n in each item, so did not need to concatenate the \n while writing
+
+87. Difference in appending list items
+
+Option1 :
+content.append([missing for missing in checklist if missing not in content ])
+Result :
+This will create a list within a list
+[a,b,c] -> after appending [c,d] -> [a,b,c,[c,d]]
+
+Option 2 :
+for missing in checklist :
+    if missing not in content :
+        content.append(missing)
+Result :
+[a,b,c] -> after appending [c,d] -> [a,b,c,c,d]
+
+Option 3 : (Best way)
+updated_content = content + checklist
+print (updated_content)
+Result :
+[a,b,c] + [d,e] -> [a,b,c,d,e]
+
+
+sort vs sorted for list :
+sort -> inplace sort
+sorted -> creates a new list
