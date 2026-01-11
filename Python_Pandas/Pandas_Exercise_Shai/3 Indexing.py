@@ -58,7 +58,6 @@ df
 df.set_index('Country')  # this does not change the df itself
 
 # %%
-# 3.1 How to reset the index ?
 
 # %%
 df.set_index('Country', inplace = True)  #inplace = True , applies the index to df itself. else we need to create a new df
